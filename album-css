@@ -1,0 +1,266 @@
+@charset "UTF-8";
+/**
+ *
+ * @Project
+ * @date    2010-00-00 00:00:00
+ * @MissingLee
+ * reset-初始化
+ * layout-布局
+ * color-色彩方案
+ * typography-文字版式
+ * 如 color/typography/layout合并在style中
+ * 则尽量遵循一个大括号内
+ * 先写layout 空格 再写其他原则
+ */
+/*layout============================================*/
+/*pre-layout--------------------------*/
+/*最顶层框架留白*/
+#wrapper{
+    margin-top:30px;
+}
+/*container定宽居中*/
+.container{
+    width:990px;
+    margin:0 auto;
+}
+/*框模型计算*/
+div,li{
+    box-sizing: border-box;
+}
+
+
+
+
+ul{
+    perspective: 10000px;
+    /*视距*/
+    transform-style: preserve-3d ;
+    /*3d保留*/
+    height:800px;
+    width:800px;
+    margin: 0 auto;
+    //transform: rotatey(20deg);
+    position: relative;
+    //background-color: rgba(0,255,0,0.5);
+    transition: transform 26000ms linear;
+
+    transform :rotatex(0deg) rotatey(0deg) rotatez(0deg);
+}
+ul:hover{
+    transform :rotatex(360deg) rotatey(360deg) rotatez(360deg);
+}
+
+li{
+
+}
+li:nth-child(1){
+    background-image: url(../images/pic1.png);
+        /* rotate x  */
+            transform: rotatey(60deg)  translatez(300px);
+            //transform: rotate3d(-1,100,0,60deg) translatez(300px);
+}
+li:nth-child(2){
+    background-image: url(../images/pic2.png);
+
+     transform: rotatey(120deg) translatez(300px);
+     ;
+}
+li:nth-child(3){
+    background-image: url(../images/pic3.png);
+
+     transform: rotatey(180deg) translatez(300px);
+}
+li:nth-child(4){
+    background-image: url(../images/pic4.png);
+
+     transform: rotatey(240deg) translatez(300px);
+}
+li:nth-child(5){
+    background-image: url(../images/pic5.png);
+
+     transform: rotatey(300deg) translatez(300px);
+}
+li:nth-child(6){
+    background-image: url(../images/pic6.png);
+
+    transform:  rotatey(0) translatez(300px);
+}
+/*----------------------------------------*/
+li:nth-child(8){
+    background-image: url(../images/pic3.png);
+        /* rotate x  */
+            transform: rotatey(60deg) rotatex(45deg) translatez(300px);
+            //transform: rotate3d(-1,100,0,60deg) translatez(300px);
+}
+li:nth-child(9){
+    background-image: url(../images/pic4.png);
+
+     transform: rotatey(120deg) rotatex(45deg) translatez(300px);
+     ;
+}
+li:nth-child(10){
+    background-image: url(../images/pic5.png);
+        /* 分步使用 rotatex-y-z的 时候 下一步忽略上一步对坐标系的改变
+         */
+     transform: rotatey(180deg) rotatex(45deg) translatez(300px);
+}
+li:nth-child(11){
+    background-image: url(../images/pic6.png);
+
+     transform: rotatey(240deg) rotatex(45deg) translatez(300px);
+}
+li:nth-child(12){
+    background-image: url(../images/pic1.png);
+
+     transform: rotatey(300deg) rotatex(45deg) translatez(300px);
+}
+li:nth-child(7){
+    background-image: url(../images/pic2.png);
+
+    transform:  rotatey(0) rotatex(45deg) translatez(300px);
+}
+/*----------------------------------------*/
+li:nth-child(17){
+    background-image: url(../images/pic5.png);
+        /* rotate x  */
+            transform: rotatey(60deg) rotatex(-45deg) translatez(300px);
+            //transform: rotate3d(-1,100,0,60deg) translatez(300px);
+}
+li:nth-child(18){
+    background-image: url(../images/pic6.png);
+
+     transform: rotatey(120deg) rotatex(-45deg) translatez(300px);
+     ;
+}
+li:nth-child(13){
+    background-image: url(../images/pic1.png);
+
+     transform: rotatey(180deg) rotatex(-45deg) translatez(300px);
+}
+li:nth-child(14){
+    background-image: url(../images/pic2.png);
+
+     transform: rotatey(240deg) rotatex(-45deg) translatez(300px);
+}
+li:nth-child(15){
+    background-image: url(../images/pic3.png);
+
+     transform: rotatey(300deg) rotatex(-45deg) translatez(300px);
+}
+li:nth-child(16){
+    background-image: url(../images/pic4.png);
+
+    transform:  rotatey(0) rotatex(-45deg) translatez(300px);
+}
+/*----------------------------------------*/
+
+#pic-room{
+
+}
+
+/*ul:hover li:nth-child(1){
+
+    transform:rotatex(-20deg) rotatey(1260deg)  translatez(300px);
+}
+ul:hover li:nth-child(2){
+
+    transform:rotatex(-20deg) rotatey(1320deg)  translatez(300px);
+}
+ul:hover li:nth-child(3){
+
+    transform:rotatex(-20deg) rotatey(1380deg)  translatez(300px);
+}
+ul:hover li:nth-child(4){
+
+    transform:rotatex(-20deg) rotatey(1440deg)  translatez(300px);
+}
+ul:hover li:nth-child(5){
+
+    transform:rotatex(-20deg) rotatey(1500deg)  translatez(300px);
+}
+ul:hover li:nth-child(6){
+
+    transform:rotatex(-20deg) rotatey(1200deg)  translatez(300px);
+}*/
+li{
+    position: absolute;
+    left:300px;
+    top:300px;
+    background-size: cover;
+    width:170px;
+    height:170px;
+    transition: transform 36000ms;
+    //transform: rotatez(30deg);
+    //transform:rotatey(20deg);
+
+    /*-webkit-transform: translatez(300px);*/
+    /*   -moz-transform: translatez(300px);*/
+    /*    -ms-transform: translatez(300px);*/
+    /*     -o-transform: translatez(300px);*/
+    /*        transform: translatez(300px);*/
+}
+
+.level3,.level2,.level1{
+    height:250px;
+    width:200px;
+    overflow:hidden;
+}
+.level3{
+
+    transform:rotate(120deg); ;
+
+}
+.level2{
+    transform:rotate(-60deg);
+
+}
+.level1{
+    transform: rotate(-60deg);
+    background-size:cover;
+}
+#new-pic-room{
+    height:500px;
+    width:500px;
+    margin:100px auto;
+    position:relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform: rotatex(0) rotatey(0) rotatez(0);
+            transition: transform 50000ms linear;
+}
+#new-pic-room:hover{
+    transform: rotatex(360deg) rotatey(360deg) rotatez(360deg);
+}
+#new-pic-room>div{
+    position: absolute;
+    left:150px;
+    top:125px;
+}
+#new-pic-room>div:nth-child(1){
+
+        transform: rotatex(0) rotatey(0) translatez(200px);
+}
+#new-pic-room>div:nth-child(2){
+
+        transform: rotatex(0) rotatey(90deg) translatez(200px);
+}
+#new-pic-room>div:nth-child(3){
+
+        transform: rotatex(0) rotatey(180deg) translatez(200px);
+}
+#new-pic-room>div:nth-child(4){
+
+        transform: rotatex(0) rotatey(270deg) translatez(200px);
+}
+#new-pic-room>div:nth-child(5){
+
+        transform: rotatex(90deg) rotatey(0) translatez(200px);
+}
+#new-pic-room>div:nth-child(6){
+
+        transform: rotatex(-90deg) rotatey(0) translatez(200px);
+}
+
+
+
+
